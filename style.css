@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Brandon Grot Regular";
+  src: url("Brandon Grot W01 Regular.ttf");
+}
+
+p {
+  font-family: "Brandon Grot Regular";
+  font-size: 40;
+  color: white;
+  padding: 10;
+  background-image: linear-gradient(to right, #0073ff, #9900ff);
+}
+
+div {
+  padding-left: 10;
+}
+
+label {
+  font-family: "Brandon Grot Regular";
+  font-size: 25;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"] + label::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #9900ff;
+  background-color: #fff;
+  content: "";
+  float: left;
+  vertical-align: middle;
+  display:inline-block;
+  margin-right: 5px;
+}
+input[type="checkbox"]:checked+label::before {
+  box-shadow: inset 0px 0px 0px 2px #fff;
+  background-color: #9900ff;
+}
