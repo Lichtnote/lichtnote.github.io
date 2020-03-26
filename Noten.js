@@ -7,15 +7,9 @@ class Note {
     noStroke();
     fill(this.farbe);
     ellipse(x, noteWo(this.relC, y), dist * 1.2, dist)
-    if (dev) {
-      strokeWeight(24 * scale);
-      stroke(0, 255, 0);
-      noFill();
-      stroke(0, 0, 0);
-    }
   }
   licht() {
-    this.farbe = '#FF2B00';
+    this.farbe = '#9900ff';
   }
   aus() {
     this.farbe = '#000000';
