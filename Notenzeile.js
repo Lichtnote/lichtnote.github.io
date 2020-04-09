@@ -30,6 +30,8 @@ class Notenzeile {
         this.noten[i].show(3*i*dist+6*dist, this.tonart.tonleiter[0].relC);
       }
     }
+
+    image(violin, dist, 100);
   }
 
   solmi() {

@@ -1,6 +1,8 @@
 var scale;
 var dist;
 
+var violin;
+
 var dev;
 var doremi;
 var ckeys;
@@ -29,6 +31,8 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(height/18);
+
+  violin = loadImage("violin.png");
 
   smooth();
 }

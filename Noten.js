@@ -4,6 +4,11 @@ class Note {
   }
 
   show(x, y) {
+    if(this.checkHilfslinie()){
+      stroke(this.farbe);
+      line(x-dist, noteWo(this.relC, y), x+dist, noteWo(this.relC, y));
+    }
+
     noStroke();
     fill(this.farbe);
     ellipse(x, noteWo(this.relC, y), dist * 1.2, dist)
@@ -13,6 +18,14 @@ class Note {
   }
   aus() {
     this.farbe = '#000000';
+  }
+
+  checkHilfslinie() {
+    if(this.relC <= 0 || this.relC >= 12){
+      return true;
+    }else{
+      return false;
+    }
   }
 }
 

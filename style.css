@@ -13,7 +13,7 @@ p {
   font-size: 40;
   color: white;
   padding: 10;
-  background-image: linear-gradient(to right, #0073ff, #9900ff);
+  background-image: linear-gradient(to right, #9900ff, #0033ff);
 }
 
 div {
@@ -28,6 +28,7 @@ label {
 input[type="checkbox"] {
   display:none;
 }
+
 input[type="checkbox"] + label::before {
   width: 15px;
   height: 15px;
@@ -36,10 +37,10 @@ input[type="checkbox"] + label::before {
   background-color: #fff;
   content: "";
   float: left;
-  vertical-align: middle;
-  display:inline-block;
   margin-right: 5px;
+  margin-top: 8px;
 }
+
 input[type="checkbox"]:checked+label::before {
   box-shadow: inset 0px 0px 0px 2px #fff;
   background-color: #9900ff;
