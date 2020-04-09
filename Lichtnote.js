@@ -13,8 +13,11 @@ var notennamen;
 
 function setup() {
   title = createP('Lichtnote');
+  title.class('title')
   solmisation = createCheckbox('Solmisation', false);
-  solmisation = createCheckbox('Notennamen', false);
+  solmisation.changed(toggleSolmisation);
+  notennamen = createCheckbox('Notennamen', false);
+  notennamen.changed(toggleNotennamen);
 
   pixelDensity(4.0);
   createCanvas(windowWidth, windowHeight/2);
@@ -24,7 +27,7 @@ function setup() {
 
   dev = false;
   doremi = "";
-  ckey = 0;
+  ckeys = 0;
 
   eins = new Notenzeile(new CDur());
 
@@ -40,6 +43,7 @@ function setup() {
 function draw() {
   background(255);
   eins.show();
+  gui();
 }
 
 function noteWo(s, t) {

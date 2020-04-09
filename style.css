@@ -8,12 +8,19 @@ body {
   src: url("Brandon Grot W01 Regular.ttf");
 }
 
-p {
+p.title {
   font-family: "Brandon Grot Regular";
   font-size: 40;
   color: white;
   padding: 10;
   background-image: linear-gradient(to right, #9900ff, #0033ff);
+}
+
+p.solmisation {
+  font-family: "Brandon Grot Regular";
+  font-size: 30;
+  color: black;
+  padding: 10;;
 }
 
 div {

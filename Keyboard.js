@@ -1,36 +1,52 @@
-function keyTyped() {
+function keyPressed() {
   if (key === '1') {
     eins.tonart.tonleiter[0].licht();
     eins.schreibe(0);
-    doremi = "Do";
+    if (solmisation.checked()) {
+      changeTest('Do');
+    }
   } else if (key === '2') {
     eins.tonart.tonleiter[1].licht();
     eins.schreibe(1);
-    doremi = "Re";
+    if (solmisation.checked()) {
+      changeTest('Re');
+    }
   } else if (key === '3') {
     eins.tonart.tonleiter[2].licht();
     eins.schreibe(2);
-    doremi = "Mi";
+    if (solmisation.checked()) {
+      changeTest('Mi');
+    }
   } else if (key === '4') {
     eins.tonart.tonleiter[3].licht();
     eins.schreibe(3);
-    doremi = "Fa";
+    if (solmisation.checked()) {
+      changeTest('Fa');
+    }
   } else if (key == '5') {
     eins.tonart.tonleiter[4].licht();
     eins.schreibe(4);
-    doremi = "Sol";
+    if (solmisation.checked()) {
+      changeTest('Sol');
+    }
   } else if (key === '6') {
     eins.tonart.tonleiter[5].licht();
     eins.schreibe(5);
-    doremi = "La";
+    if (solmisation.checked()) {
+      changeTest('La');
+    }
   } else if (key === '7') {
     eins.tonart.tonleiter[6].licht();
     eins.schreibe(6);
-    doremi = "Si";
+    if (solmisation.checked()) {
+      changeTest('Si');
+    }
   } else if (key === '8') {
     eins.tonart.tonleiter[7].licht();
     eins.schreibe(7);
-    doremi = "Do";
+    if (solmisation.checked()) {
+      changeTest('Do');
+    }
   } else if (key === 'z') {
     eins.undo();
   } else if (key === 't') {
@@ -40,7 +56,7 @@ function keyTyped() {
   } else if (key === 'd') {
     eins = new Notenzeile(new CDur());
   } else if (key === 'm') {
-    eins = new Notenzeile(new amoll());
+    eins = new Notenzeile(new Amoll());
   }
   ckeys++;
 }
@@ -63,8 +79,11 @@ function keyReleased() {
   } else if (key === '8') {
     eins.tonart.tonleiter[7].aus();
   }
-  ckeys--;
+  if (ckeys > 0) {
+    ckeys--;
+  }
   if (ckeys == 0) {
-    doremi = "";
+    test.remove();
+    test = createP('');
   }
 }
