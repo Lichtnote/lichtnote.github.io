@@ -7,17 +7,40 @@ var dev;
 var doremi;
 var ckeys;
 
+var polySynth;
+var piano;
+var guitar;
+var organ;
+var edm;
+
 var title;
 var solmisation;
 var notennamen;
+var sound;
+var tonartenDiv;
+var tonarten;
 
 function setup() {
   title = createP('Lichtnote');
   title.class('title')
+
   solmisation = createCheckbox('Solmisation', false);
   solmisation.changed(toggleSolmisation);
   notennamen = createCheckbox('Notennamen', false);
   notennamen.changed(toggleNotennamen);
+
+  tonartenDiv = createDiv();
+  tonartenDiv.class('dropdown');
+  tonarten = createSelect('tonarten');
+
+  sound = createCheckbox('Sound', false);
+  sound.id('sound');
+  //tonarten.position(10, 10);
+  tonarten.option('C-Dur');
+  tonarten.option('a-Moll');
+  tonarten.class('dropdown');
+  tonarten.parent(tonartenDiv);
+  tonarten.changed(changeTonart);
 
   pixelDensity(4.0);
   createCanvas(windowWidth, windowHeight/2);
@@ -29,13 +52,19 @@ function setup() {
   doremi = "";
   ckeys = 0;
 
+  polySynth = new p5.PolySynth();
+  piano = Synth.createInstrument('piano');
+  organ = Synth.createInstrument('organ');
+  guitar = Synth.createInstrument('acoustic');
+  edm = Synth.createInstrument('edm');
+
   eins = new Notenzeile(new CDur());
 
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(height/18);
 
-  violin = loadImage("violin.png");
+  violin = loadImage('violin.png');
 
   smooth();
 }

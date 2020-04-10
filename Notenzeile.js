@@ -31,7 +31,7 @@ class Notenzeile {
       }
     }
 
-    image(violin, dist, 100);
+    image(violin, dist*2, height/2, violin.width/4, violin.height/4);
   }
 
   solmi() {

@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Brandon Grot Regular";
 }
 
 @font-face {
@@ -9,27 +10,37 @@ body {
 }
 
 p.title {
-  font-family: "Brandon Grot Regular";
   font-size: 40;
   color: white;
   padding: 10;
-  background-image: linear-gradient(to right, #9900ff, #0033ff);
+  background-image: linear-gradient(to right, #9900ff, #3659e3);
 }
 
-p.solmisation {
-  font-family: "Brandon Grot Regular";
+p.subtitle {
   font-size: 30;
   color: black;
   padding: 10;;
 }
 
-div {
-  padding-left: 10;
+#solmisation {
+  position: relative;
+  margin-top: 0;
 }
 
+#notenname {
+  position: relative;
+}
+
+
 label {
-  font-family: "Brandon Grot Regular";
   font-size: 25;
+  cursor: pointer;
+}
+
+#sound {
+  font-size: 25;
+  cursor: pointer;
+  float: right;
 }
 
 input[type="checkbox"] {
