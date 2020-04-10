@@ -21,5 +21,7 @@ function changeTonart() {
     eins = new Notenzeile(new CDur());
   } else if (item == 'a-Moll') {
     eins = new Notenzeile(new Amoll());
-  }
+  } else if (item == 'G-Dur') {
+  eins = new Notenzeile(new GDur());
+}
 }

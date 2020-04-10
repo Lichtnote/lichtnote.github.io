@@ -23,15 +23,21 @@ class Notenzeile {
 
     if (this.leiter) {
       for (let i = 0; i < this.tonart.tonleiter.length; i++) {
-        this.tonart.tonleiter[i].show(3*i*dist+6*dist, this.tonart.tonleiter[0].relC);
+        this.tonart.tonleiter[i].show(3*i*dist+8*dist, this.tonart.tonleiter[0].relC);
       }
     } else {
       for (let i = 0; i < this.noten.length; i++) {
-        this.noten[i].show(3*i*dist+6*dist, this.tonart.tonleiter[0].relC);
+        this.noten[i].show(3*i*dist+8*dist, this.tonart.tonleiter[0].relC);
       }
     }
 
-    image(violin, dist*2, height/2, violin.width/4, violin.height/4);
+    textAlign(CENTER, CENTER);
+    textSize(150);
+    fill(0);
+    text('𝄞', dist*2, height/2+5);
+    //image(violin, dist*2, height/2, violin.width/4, violin.height/4);
+
+    this.tonart.show();
   }
 
   solmi() {

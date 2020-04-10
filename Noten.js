@@ -7,13 +7,13 @@ class Note {
     if(this.checkHilfslinie()){
       stroke(this.farbe);
       for(let i = 0; i >= this.relC; i-=2){
-        line(x-dist, noteWo(int((this.relC-i)/2)*2, y), x+dist, noteWo(int((this.relC-i)/2)*2, y));
+        line(x-dist, noteWo(int((this.relC-i)/2)*2), x+dist, noteWo(int((this.relC-i)/2)*2));
       }
     }
 
     noStroke();
     fill(this.farbe);
-    ellipse(x, noteWo(this.relC, y), dist * 1.2, dist)
+    ellipse(x, noteWo(this.relC), dist * 1.2, dist)
   }
   play(){
     //userStartAudio();
@@ -73,8 +73,18 @@ class F extends Note {
   constructor(octave) {
     super();
     this.relC = 3;
-    this.elC += octave * 7;
+    this.relC += octave * 7;
     this.name = 'F';
+    this.octave = octave+3;
+  }
+}
+
+class Fis extends Note {
+  constructor(octave) {
+    super();
+    this.relC = 3;
+    this.relC += octave * 7;
+    this.name = 'F#';
     this.octave = octave+3;
   }
 }

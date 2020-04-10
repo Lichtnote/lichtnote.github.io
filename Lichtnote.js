@@ -38,6 +38,7 @@ function setup() {
   //tonarten.position(10, 10);
   tonarten.option('C-Dur');
   tonarten.option('a-Moll');
+  tonarten.option('G-Dur');
   tonarten.class('dropdown');
   tonarten.parent(tonartenDiv);
   tonarten.changed(changeTonart);
@@ -75,7 +76,7 @@ function draw() {
   gui();
 }
 
-function noteWo(s, t) {
+function noteWo(s) {
   return (height / 2 + dist * 3 - dist / 2 * s);
 }
 

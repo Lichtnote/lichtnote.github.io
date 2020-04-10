@@ -1,7 +1,10 @@
 class Tonart {
   constructor() {
     this.tonleiter = [];
+    this.vorzeichen = [];
   }
+
+  show(){}
 }
 
 class CDur extends Tonart{
@@ -29,5 +32,27 @@ class Amoll extends Tonart {
     this.tonleiter[5] = new F(0);
     this.tonleiter[6] = new G(0);
     this.tonleiter[7] = new A(0);
+  }
+}
+
+class GDur extends Tonart {
+  constructor() {
+    super();
+    this.tonleiter[0] = new G(0);
+    this.tonleiter[1] = new A(0);
+    this.tonleiter[2] = new H(0);
+    this.tonleiter[3] = new C(1);
+    this.tonleiter[4] = new D(1);
+    this.tonleiter[5] = new E(1);
+    this.tonleiter[6] = new Fis(1);
+    this.tonleiter[7] = new G(1);
+
+    this.vorzeichen[0] = new Vorzeichen(new Fis(1));
+  }
+
+  show(){
+    for(let i = 0; i < this.vorzeichen.length; i++){
+      this.vorzeichen[i].show();
+    }
   }
 }
