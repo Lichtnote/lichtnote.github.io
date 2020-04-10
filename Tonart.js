@@ -18,6 +18,8 @@ class CDur extends Tonart{
     this.tonleiter[5] = new A(0);
     this.tonleiter[6] = new H(0);
     this.tonleiter[7] = new C(1);
+    this.tonleiter[8] = new D(1);
+    this.tonleiter[9] = new E(1);
   }
 }
 
@@ -32,6 +34,8 @@ class Amoll extends Tonart {
     this.tonleiter[5] = new F(0);
     this.tonleiter[6] = new G(0);
     this.tonleiter[7] = new A(0);
+    this.tonleiter[8] = new H(0);
+    this.tonleiter[9] = new C(1);
   }
 }
 
@@ -46,6 +50,8 @@ class GDur extends Tonart {
     this.tonleiter[5] = new E(1);
     this.tonleiter[6] = new Fis(1);
     this.tonleiter[7] = new G(1);
+    this.tonleiter[8] = new A(1);
+    this.tonleiter[9] = new H(1);
 
     this.vorzeichen[0] = new Vorzeichen(new Fis(1));
   }

@@ -79,7 +79,27 @@ function keyPressed() {
     if (notennamen.checked()) {
       changeNote(7);
     }
-  } else if (key === 'z') {
+  } else if (key === '9') {
+    eins.tonart.tonleiter[8].licht();
+    eins.tonart.tonleiter[8].play();
+    eins.schreibe(8);
+    if (solmisation.checked()) {
+      changeTest('Re');
+    }
+    if (notennamen.checked()) {
+      changeNote(8);
+    }
+  } else if (key === '0') {
+  eins.tonart.tonleiter[9].licht();
+  eins.tonart.tonleiter[9].play();
+  eins.schreibe(9);
+  if (solmisation.checked()) {
+    changeTest('Mi');
+  }
+  if (notennamen.checked()) {
+    changeNote(9);
+  }
+} else if (key === 'z') {
     eins.undo();
   } else if (key === 't') {
     eins.leiter = !eins.leiter;
@@ -110,6 +130,10 @@ function keyReleased() {
     eins.tonart.tonleiter[6].aus();
   } else if (key === '8') {
     eins.tonart.tonleiter[7].aus();
+  } else if (key === '9') {
+    eins.tonart.tonleiter[8].aus();
+  } else if (key === '0') {
+    eins.tonart.tonleiter[9].aus();
   }
   if (ckeys > 0) {
     ckeys--;

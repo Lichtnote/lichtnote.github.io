@@ -9,6 +9,9 @@ class Note {
       for(let i = 0; i >= this.relC; i-=2){
         line(x-dist, noteWo(int((this.relC-i)/2)*2), x+dist, noteWo(int((this.relC-i)/2)*2));
       }
+      for(let i = 12; i <= this.relC; i+=2){
+        line(x-dist, noteWo(int(this.relC/2)*2-i+12), x+dist, noteWo(int(this.relC/2)*2-i+12));
+      }
     }
 
     noStroke();
