@@ -2,6 +2,7 @@ var scale;
 var dist;
 
 var violin;
+var bassKey;
 
 var dev;
 var doremi;
@@ -81,6 +82,7 @@ function setup() {
   textSize(height/18);
 
   violin = loadImage('violin.png');
+  bassKey = loadImage('bass.png');
 
   smooth();
 }
