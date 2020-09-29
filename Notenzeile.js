@@ -38,8 +38,8 @@ class NotenzeileViolin {
     textAlign(CENTER, CENTER);
     textSize(150);
     fill(0);
-    text('𝄞', dist*2, height/2+dist/3);
-    //image(violin, dist*2, height/2, violin.width/4, violin.height/4);
+    //text('𝄞', dist*2, height/2+dist/3);
+    image(violin, dist*2, height/2, violin.width/4, violin.height/4);
 
     this.tonart.show();
   }
@@ -109,8 +109,8 @@ class NotenzeileBass {
     textAlign(CENTER, CENTER);
     textSize(148);
     fill(0);
-    text('𝄢', dist*2, height/2+dist/4*3);
-    //image(violin, dist*2, height/2, violin.width/4, violin.height/4);
+    //text('𝄢', dist*2, height/2+dist/4*3);
+    image(violin, dist*2, height/2, violin.width/4, violin.height/4);
 
     this.tonart.show();
   }
