@@ -45,6 +45,12 @@ label {
   width: 200;
 }
 
+#bass {
+  font-size: 25;
+  cursor: pointer;
+  float: left;
+}
+
 #sound {
   font-size: 25;
   cursor: pointer;

@@ -16,7 +16,8 @@ var edm;
 var title;
 var solmisation;
 var notennamen;
-var sound;
+var knaben;
+var bass;
 var tonartenDiv;
 var tonarten;
 
@@ -36,6 +37,9 @@ function setup() {
   tonartenDiv = createDiv();
   tonartenDiv.class('dropdown');
   tonarten = createSelect('tonarten');
+
+  bass = createCheckbox('Bassschlüssel', false);
+  bass.id('bass');
 
   sound = createCheckbox('Sound', false);
   sound.id('sound');
