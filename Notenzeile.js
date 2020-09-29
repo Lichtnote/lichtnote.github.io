@@ -41,7 +41,10 @@ class NotenzeileViolin {
     //text('𝄞', dist*2, height/2+dist/3);
     image(violin, dist*2, height/2, violin.width/4, violin.height/4);
 
-    this.tonart.show();
+
+    for(let i = 0; i < this.tonart.vorzeichen.length; i++){
+      this.tonart.vorzeichen[i].show(i, false);
+    }
   }
 
   solmi() {
@@ -110,9 +113,11 @@ class NotenzeileBass {
     textSize(148);
     fill(0);
     //text('𝄢', dist*2, height/2+dist/4*3);
-    image(bassKey, dist*2, height/2, bassKey.width/4, bassKey.height/4);
+    image(bassKey, dist*2, height/2-dist/3, bassKey.width/2, bassKey.height/2);
 
-    this.tonart.show();
+    for(let i = 0; i < this.tonart.vorzeichen.length; i++){
+      this.tonart.vorzeichen[i].show(i, true);
+    }
   }
 
   solmi() {
