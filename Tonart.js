@@ -3,6 +3,7 @@ class Tonart {
     this.tonleiter = [];
     this.vorzeichen = [];
     this.scale = '';
+    this.moll = false;
   }
 
   show(){}
@@ -19,6 +20,8 @@ class BDur extends Tonart {
     this.tonleiter[4] = new F(0);
     this.tonleiter[5] = new G(0);
     this.tonleiter[6] = new A(0);
+
+    this.moll = false;
 
     this.vorzeichen[0] = new Vorzeichen(new B(0));
     this.vorzeichen[1] = new Vorzeichen(new Es(1));
@@ -42,6 +45,8 @@ class FDur extends Tonart {
     this.tonleiter[5] = new D(1);
     this.tonleiter[6] = new E(1);
 
+    this.moll = false;
+
     this.vorzeichen[0] = new Vorzeichen(new B(0));
   }
 
@@ -62,6 +67,8 @@ class CDur extends Tonart{
     this.tonleiter[4] = new G(0);
     this.tonleiter[5] = new A(0);
     this.tonleiter[6] = new H(0);
+
+    this.moll = false;
   }
 }
 
@@ -75,6 +82,8 @@ class GDur extends Tonart {
     this.tonleiter[4] = new D(1);
     this.tonleiter[5] = new E(1);
     this.tonleiter[6] = new Fis(1);
+
+    this.moll = false;
 
     this.vorzeichen[0] = new Vorzeichen(new Fis(1));
   }
@@ -96,6 +105,8 @@ class DDur extends Tonart {
     this.tonleiter[4] = new A(0);
     this.tonleiter[5] = new H(0);
     this.tonleiter[6] = new Cis(1);
+
+    this.moll = false;
 
     this.vorzeichen[0] = new Vorzeichen(new Fis(1));
     this.vorzeichen[1] = new Vorzeichen(new Cis(1));
@@ -119,6 +130,8 @@ class Dmoll extends Tonart {
     this.tonleiter[5] = new B(0);
     this.tonleiter[6] = new C(1);
 
+    this.moll = true;
+
     this.vorzeichen[0] = new Vorzeichen(new B(0));
   }
 
@@ -139,6 +152,8 @@ class Amoll extends Tonart {
     this.tonleiter[4] = new E(1);
     this.tonleiter[5] = new F(1);
     this.tonleiter[6] = new G(1);
+
+    this.moll = true;
   }
 }
 
@@ -152,6 +167,8 @@ class Emoll extends Tonart {
     this.tonleiter[4] = new H(0);
     this.tonleiter[5] = new C(1);
     this.tonleiter[6] = new D(1);
+
+    this.moll = true;
 
     this.vorzeichen[0] = new Vorzeichen(new Fis(1));
   }

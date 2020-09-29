@@ -14,10 +14,18 @@ function toggleNotennamen() {
   }
 }
 
+function changeKey() {
+  if(bass.checked()) {
+    eins = new NotenzeileBass(eins.tonart);
+  } else {
+    eins = new NotenzeileViolin(eins.tonart);
+  }
+}
+
 function changeTonart() {
   let item = tonarten.value();
   background(200);
-  if(bass == false) {
+  if(!bass.checked()) {
     if (item == 'B-Dur') {
       eins = new NotenzeileViolin(new BDur());
     } else if (item == 'F-Dur') {

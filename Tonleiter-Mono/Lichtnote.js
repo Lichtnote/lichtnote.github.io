@@ -40,6 +40,7 @@ function setup() {
 
   bass = createCheckbox('Bassschlüssel', false);
   bass.id('bass');
+  bass.changed(changeKey);
 
   sound = createCheckbox('Sound', false);
   sound.id('sound');

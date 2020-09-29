@@ -75,7 +75,7 @@ class NotenzeileBass {
     this.noten = [];
     for(let i = 0; i < 10; i++){
       this.noten[i] = Object.create(tonart.tonleiter[i%7]);
-      this.noten[i].addOctave(int(i/7)-1);
+      this.noten[i].addOctave(int(i/7)-2);
     }
     this.leiter = true;
     this.doremi = this.doremi;
