@@ -1,28 +1,29 @@
 class Note {
   constructor() {
     this.farbe = '#000000';
+    this.vorzeichen = '';
   }
 
-  show(x, y) {
-    if(this.checkHilfslinie()){
+  show(x, c) {
+    if(this.checkHilfslinie(c)){
       stroke(this.farbe);
-      for(let i = 0; i >= this.relC; i-=2){
-        line(x-dist, noteWo(int((this.relC-i)/2)*2), x+dist, noteWo(int((this.relC-i)/2)*2));
+      for(let i = 0; i >= this.relC+c; i-=2){
+        line(x-dist, noteWo(int(((this.relC+c)-i)/2)*2), x+dist, noteWo(int((this.relC+c-i)/2)*2));
       }
-      for(let i = 12; i <= this.relC; i+=2){
-        line(x-dist, noteWo(int(this.relC/2)*2-i+12), x+dist, noteWo(int(this.relC/2)*2-i+12));
+      for(let i = 12; i <= this.relC+c; i+=2){
+        line(x-dist, noteWo(int((this.relC+c)/2)*2-i+12), x+dist, noteWo(int((this.relC+c)/2)*2-i+12));
       }
     }
 
     noStroke();
     fill(this.farbe);
-    ellipse(x, noteWo(this.relC), dist * 1.2, dist)
+    ellipse(x, noteWo(this.relC+c), dist * 1.2, dist)
   }
   play(){
     //userStartAudio();
     //polySynth.play(this.name + this.octave, 1/2, 0, 1/4);
     if(sound.checked()){
-      piano.play(this.name, this.octave, 1);
+      piano.play(this.name, this.octave, 2);
     }
   }
 
@@ -33,12 +34,17 @@ class Note {
     this.farbe = '#000000';
   }
 
-  checkHilfslinie() {
-    if(this.relC <= 0 || this.relC >= 12){
+  checkHilfslinie(c) {
+    if(this.relC+c <= 0 || this.relC+c >= 12){
       return true;
     }else{
       return false;
     }
+  }
+
+  addOctave(amount){
+    this.octave+=amount;
+    this.relC += amount*7;
   }
 }
 
@@ -48,7 +54,20 @@ class C extends Note {
     this.relC = 0;
     this.relC += octave * 7;
     this.name = 'C';
-    this.octave = octave+3;
+    this.nick = 'C';
+    this.octave = octave+4;
+  }
+}
+
+class Cis extends Note {
+  constructor(octave) {
+    super();
+    this.relC = 0;
+    this.relC += octave * 7;
+    this.name = 'C#';
+    this.nick = 'Cis';
+    this.vorzeichen = '#';
+    this.octave = octave+4;
   }
 }
 
@@ -58,7 +77,20 @@ class D extends Note {
     this.relC = 1;
     this.relC += octave * 7;
     this.name = 'D';
-    this.octave = octave+3;
+    this.nick = 'D';
+    this.octave = octave+4;
+  }
+}
+
+class Es extends Note {
+  constructor(octave) {
+    super();
+    this.relC = 2;
+    this.relC += octave * 7;
+    this.name = 'D#';
+    this.nick = 'Es';
+    this.vorzeichen = 'b';
+    this.octave = octave+4;
   }
 }
 
@@ -68,7 +100,8 @@ class E extends Note {
     this.relC = 2;
     this.relC += octave * 7;
     this.name = 'E';
-    this.octave = octave+3;
+    this.nick = 'E';
+    this.octave = octave+4;
   }
 }
 
@@ -78,7 +111,8 @@ class F extends Note {
     this.relC = 3;
     this.relC += octave * 7;
     this.name = 'F';
-    this.octave = octave+3;
+    this.nick = 'F';
+    this.octave = octave+4;
   }
 }
 
@@ -88,7 +122,9 @@ class Fis extends Note {
     this.relC = 3;
     this.relC += octave * 7;
     this.name = 'F#';
-    this.octave = octave+3;
+    this.nick = 'Fis';
+    this.vorzeichen = '#';
+    this.octave = octave+4;
   }
 }
 
@@ -97,8 +133,9 @@ class G extends Note {
     super();
     this.relC = 4;
     this.relC += octave * 7;
-    this.name = 'G';3333333333
-    this.octave = octave+3;
+    this.name = 'G';
+    this.nick = 'G';
+    this.octave = octave+4;
   }
 }
 
@@ -108,8 +145,21 @@ class A extends Note {
     this.relC = 5;
     this.relC += octave * 7;
     this.name = 'A';
-    this.octave = octave+3;
+    this.nick = 'A';
+    this.octave = octave+4;
   }
+}
+
+class B extends Note {
+    constructor(octave) {
+      super();
+      this.relC = 6;
+      this.relC += octave * 7;
+      this.name = 'A#';
+      this.nick = 'B';
+      this.vorzeichen = 'b';
+      this.octave = octave+4;
+    }
 }
 
 class H extends Note {
@@ -118,6 +168,7 @@ class H extends Note {
     this.relC = 6;
     this.relC += octave * 7;
     this.name = 'B';
-    this.octave = octave+3;
+    this.nick = 'H';
+    this.octave = octave+4;
   }
 }
