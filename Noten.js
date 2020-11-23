@@ -21,6 +21,7 @@ class Note {
     } else {
       stroke(this.farbe);
       strokeWeight(24*scale);
+      noFill();
     }
     ellipse(x, noteWo(this.relC+c), dist * 1.2, dist)
   }
