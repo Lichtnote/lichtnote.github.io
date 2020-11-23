@@ -91,6 +91,9 @@ function draw() {
   background(255,255,255);
   eins.show();
   gui();
+  noStroke();
+  fill("#9900ff");
+  rect(width/2, 2*dist, 2*dist, 2*dist)
 }
 
 function noteWo(s) {
