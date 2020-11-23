@@ -93,7 +93,15 @@ function draw() {
   gui();
   noStroke();
   fill("#9900ff");
-  rect(width/2, 2*dist, 2*dist, 2*dist)
+  rect(width/2-dist*4, 2*dist, dist, dist)
+  fill("#ed553b");
+  rect(width/2-dist*2, 2*dist, dist, dist)
+  fill("#3caea3");
+  rect(width/2, 2*dist, dist, dist)
+  fill("#f6d55c");
+  rect(width/2+dist*2, 2*dist, dist, dist)
+  fill("#b4cf68");
+  rect(width/2+dist*4, 2*dist, dist, dist)
 }
 
 function noteWo(s) {
