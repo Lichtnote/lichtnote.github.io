@@ -15,14 +15,8 @@ class Note {
         line(x-dist, noteWo(int((this.relC+c)/2)*2-i+12), x+dist, noteWo(int((this.relC+c)/2)*2-i+12));
       }
     }
-    if(this.light) {
-      noStroke();
-      fill(this.farbe);
-    } else {
-      stroke(this.farbe);
-      strokeWeight(36*scale);
-      noFill();
-    }
+    noStroke();
+    fill(this.farbe);
     ellipse(x, noteWo(this.relC+c), dist * 1.2, dist)
   }
   play(){
