@@ -81,8 +81,8 @@ function setup() {
   textAlign(CENTER, CENTER);
   textSize(height/18);
 
-  violin = loadImage('violin.png');
-  bassKey = loadImage('bass.png');
+  violin = loadImage('data/violin.png');
+  bassKey = loadImage('data/bass.png');
 
   smooth();
 }
