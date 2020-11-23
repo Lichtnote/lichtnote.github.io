@@ -1,6 +1,7 @@
 class Note {
   constructor() {
     this.farbe = '#000000';
+    this.light = false;
     this.vorzeichen = '';
   }
 
@@ -14,9 +15,13 @@ class Note {
         line(x-dist, noteWo(int((this.relC+c)/2)*2-i+12), x+dist, noteWo(int((this.relC+c)/2)*2-i+12));
       }
     }
-
-    noStroke();
-    fill(this.farbe);
+    if(this.light) {
+      noStroke();
+      fill(this.farbe);
+    } else {
+      stroke(this.farbe);
+      strokeWeight(24*scale);
+    }
     ellipse(x, noteWo(this.relC+c), dist * 1.2, dist)
   }
   play(){
@@ -29,9 +34,11 @@ class Note {
 
   licht() {
     this.farbe = '#9900ff';
+    this.light = true;
   }
   aus() {
     this.farbe = '#000000';
+    this.light = false;
   }
 
   checkHilfslinie(c) {
