@@ -15,11 +15,7 @@ function toggleNotennamen() {
 }
 
 function changeKey() {
-  if(bass.checked()) {
-    eins = new NotenzeileBass(eins.tonart);
-  } else {
-    eins = new NotenzeileViolin(eins.tonart);
-  }
+  changeTonart();
 }
 
 function changeTonart() {
