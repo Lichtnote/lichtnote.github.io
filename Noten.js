@@ -28,7 +28,7 @@ class Note {
   }
 
   licht() {
-    this.farbe = '#9900ff';
+    this.farbe = '#f6d55c';
     this.light = true;
   }
   aus() {
