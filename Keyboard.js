@@ -1,6 +1,19 @@
 function keyPressed() {
   print(keyCode);
-  if (key === '1') {
+  if (keyCode === 0) {
+    eins.noten[0].licht();
+    eins.noten[0].play();
+    if (solmisation.checked()) {
+      if(eins.tonart.moll == false) {
+        changeTest('Si');
+      } else {
+        changeTest('Sol');
+      }
+    }
+    if (notennamen.checked()) {
+      changeNote(6);
+    }
+  } else if (key === '1') {
     eins.noten[1].licht();
     eins.noten[1].play();
     eins.schreibe(0);
