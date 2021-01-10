@@ -1,7 +1,8 @@
 function keyPressed() {
+  print(keyCode);
   if (key === '1') {
-    eins.noten[0].licht();
-    eins.noten[0].play();
+    eins.noten[1].licht();
+    eins.noten[1].play();
     eins.schreibe(0);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -14,8 +15,8 @@ function keyPressed() {
       changeNote(0);
     }
   } else if (key === '2') {
-    eins.noten[1].licht();
-    eins.noten[1].play();
+    eins.noten[2].licht();
+    eins.noten[2].play();
     eins.schreibe(1);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -28,8 +29,8 @@ function keyPressed() {
       changeNote(1);
     }
   } else if (key === '3') {
-    eins.noten[2].licht();
-    eins.noten[2].play();
+    eins.noten[3].licht();
+    eins.noten[3].play();
     eins.schreibe(2);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -42,8 +43,8 @@ function keyPressed() {
       changeNote(2);
     }
   } else if (key === '4') {
-    eins.noten[3].licht();
-    eins.noten[3].play();
+    eins.noten[4].licht();
+    eins.noten[4].play();
     eins.schreibe(3);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -56,8 +57,8 @@ function keyPressed() {
       changeNote(3);
     }
   } else if (key == '5') {
-    eins.noten[4].licht();
-    eins.noten[4].play();
+    eins.noten[5].licht();
+    eins.noten[5].play();
     eins.schreibe(4);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -70,8 +71,8 @@ function keyPressed() {
       changeNote(4);
     }
   } else if (key === '6') {
-    eins.noten[5].licht();
-    eins.noten[5].play();
+    eins.noten[6].licht();
+    eins.noten[6].play();
     eins.schreibe(5);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -84,8 +85,8 @@ function keyPressed() {
       changeNote(5);
     }
   } else if (key === '7') {
-    eins.noten[6].licht();
-    eins.noten[6].play();
+    eins.noten[7].licht();
+    eins.noten[7].play();
     eins.schreibe(6);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -98,8 +99,8 @@ function keyPressed() {
       changeNote(6);
     }
   } else if (key === '8') {
-    eins.noten[7].licht();
-    eins.noten[7].play();
+    eins.noten[8].licht();
+    eins.noten[8].play();
     eins.schreibe(7);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -112,8 +113,8 @@ function keyPressed() {
       changeNote(0);
     }
   } else if (key === '9') {
-    eins.noten[8].licht();
-    eins.noten[8].play();
+    eins.noten[9].licht();
+    eins.noten[9].play();
     eins.schreibe(8);
     if (solmisation.checked()) {
       if(eins.tonart.moll == false) {
@@ -126,8 +127,8 @@ function keyPressed() {
       changeNote(1);
     }
   } else if (key === '0') {
-  eins.noten[9].licht();
-  eins.noten[9].play();
+  eins.noten[10].licht();
+  eins.noten[10].play();
   eins.schreibe(9);
   if (solmisation.checked()) {
     if(eins.tonart.moll == false) {
