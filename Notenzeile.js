@@ -2,7 +2,7 @@ class NotenzeileViolin {
   constructor(tonart) {
     this.tonart = tonart;
     this.noten = [];
-    for(let i = 0; i < 10; i++){
+    for(let i = -1; i < 10; i++){
       this.noten[i] = Object.create(tonart.tonleiter[i%7]);
       this.noten[i].addOctave(int(i/7));
     }
