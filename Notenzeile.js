@@ -4,9 +4,9 @@ class NotenzeileViolin {
     this.noten = [];
     this.noten[0] = Object.create(tonart.tonleiter[6]);
     this.noten[0].addOctave(-1);
-    for(let i = 1; i < 11; i++){
-      this.noten[i] = Object.create(tonart.tonleiter[i%7]);
-      this.noten[i].addOctave(int(i/7));
+    for(let i = 0; i < 10; i++){
+      this.noten[i+1] = Object.create(tonart.tonleiter[i%7]);
+      this.noten[i+1].addOctave(int(i/7));
     }
     this.leiter = true;
     this.doremi = this.doremi;
