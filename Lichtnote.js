@@ -75,7 +75,7 @@ function setup() {
   guitar = Synth.createInstrument('acoustic');
   edm = Synth.createInstrument('edm');
 
-  eins = new NotenzeileViolin(new CDur());
+  eins = new NotenzeileViolin(new CDur(), 0);
 
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
