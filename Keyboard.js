@@ -168,7 +168,9 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  if (key === '1') {
+  if(keyCode === 0) {
+    eins.noten[0].aus();
+  }else if (key === '1') {
     eins.noten[1].aus();
   } else if (key === '2') {
     eins.noten[2].aus();
