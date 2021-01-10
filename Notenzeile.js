@@ -1,12 +1,12 @@
 class NotenzeileViolin {
-  constructor(tonart) {
+  constructor(tonart, octave) {
     this.tonart = tonart;
     this.noten = [];
     this.noten[0] = Object.create(tonart.tonleiter[6]);
-    this.noten[0].addOctave(-1);
+    this.noten[0].addOctave(-1+octave);
     for(let i = 0; i < 10; i++){
       this.noten[i+1] = Object.create(tonart.tonleiter[i%7]);
-      this.noten[i+1].addOctave(int(i/7));
+      this.noten[i+1].addOctave(int(i/7)+octave);
     }
     this.leiter = true;
     this.doremi = this.doremi;
@@ -75,14 +75,14 @@ class NotenzeileViolin {
 }
 
 class NotenzeileBass {
-  constructor(tonart) {
+  constructor(tonart, octave) {
     this.tonart = tonart;
     this.noten = [];
     this.noten[0] = Object.create(tonart.tonleiter[6]);
-    this.noten[0].addOctave(-2);
+    this.noten[0].addOctave(-2+octave);
     for(let i = 0; i < 10; i++){
       this.noten[i+1] = Object.create(tonart.tonleiter[i%7]);
-      this.noten[i+1].addOctave(int(i/7)-1);
+      this.noten[i+1].addOctave(int(i/7)-1+octave);
     }
     this.leiter = true;
     this.doremi = this.doremi;

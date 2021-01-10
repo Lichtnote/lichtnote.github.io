@@ -27,39 +27,39 @@ function changeTonart() {
   background(200);
   if(!bass.checked()) {
     if (item == 'B-Dur') {
-      eins = new NotenzeileViolin(new BDur());
+      eins = new NotenzeileViolin(new BDur(), 0);
     } else if (item == 'F-Dur') {
-      eins = new NotenzeileViolin(new FDur());
+      eins = new NotenzeileViolin(new FDur(), 0);
     } else if (item == 'C-Dur') {
-      eins = new NotenzeileViolin(new CDur());
+      eins = new NotenzeileViolin(new CDur(), 0);
     } else if (item == 'G-Dur') {
-      eins = new NotenzeileViolin(new GDur());
+      eins = new NotenzeileViolin(new GDur(), 0);
     } else if (item == 'D-Dur') {
-      eins = new NotenzeileViolin(new DDur());
+      eins = new NotenzeileViolin(new DDur(), 0);
     } else if (item == 'd-Moll') {
-      eins = new NotenzeileViolin(new Dmoll());
+      eins = new NotenzeileViolin(new Dmoll(), 0);
     } else if (item == 'a-Moll') {
-      eins = new NotenzeileViolin(new Amoll());
+      eins = new NotenzeileViolin(new Amoll(), 0);
     } else if (item == 'e-Moll') {
-      eins = new NotenzeileViolin(new Emoll());
+      eins = new NotenzeileViolin(new Emoll(), 0);
     }
   } else {
     if (item == 'B-Dur') {
-      eins = new NotenzeileBass(new BDur());
+      eins = new NotenzeileBass(new BDur(), 0);
     } else if (item == 'F-Dur') {
-      eins = new NotenzeileBass(new FDur());
+      eins = new NotenzeileBass(new FDur(), -1);
     } else if (item == 'C-Dur') {
-      eins = new NotenzeileBass(new CDur());
+      eins = new NotenzeileBass(new CDur(), 0);
     } else if (item == 'G-Dur') {
-      eins = new NotenzeileBass(new GDur());
+      eins = new NotenzeileBass(new GDur(), -1);
     } else if (item == 'D-Dur') {
-      eins = new NotenzeileBass(new DDur());
+      eins = new NotenzeileBass(new DDur(), 0);
     } else if (item == 'd-Moll') {
-      eins = new NotenzeileBass(new Dmoll());
+      eins = new NotenzeileBass(new Dmoll(), 0);
     } else if (item == 'a-Moll') {
-      eins = new NotenzeileBass(new Amoll());
+      eins = new NotenzeileBass(new Amoll(), 0);
     } else if (item == 'e-Moll') {
-      eins = new NotenzeileBass(new Emoll());
+      eins = new NotenzeileBass(new Emoll(), 0);
     }
   }
 }
