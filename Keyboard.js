@@ -156,25 +156,25 @@ function keyPressed() {
 
 function keyReleased() {
   if (key === '1') {
-    eins.noten[0].aus();
-  } else if (key === '2') {
     eins.noten[1].aus();
-  } else if (key === '3') {
+  } else if (key === '2') {
     eins.noten[2].aus();
-  } else if (key === '4') {
+  } else if (key === '3') {
     eins.noten[3].aus();
-  } else if (key === '5') {
+  } else if (key === '4') {
     eins.noten[4].aus();
-  } else if (key === '6') {
+  } else if (key === '5') {
     eins.noten[5].aus();
-  } else if (key === '7') {
+  } else if (key === '6') {
     eins.noten[6].aus();
-  } else if (key === '8') {
+  } else if (key === '7') {
     eins.noten[7].aus();
-  } else if (key === '9') {
+  } else if (key === '8') {
     eins.noten[8].aus();
-  } else if (key === '0') {
+  } else if (key === '9') {
     eins.noten[9].aus();
+  } else if (key === '0') {
+    eins.noten[10].aus();
   }
   if (ckeys > 0) {
     ckeys--;
